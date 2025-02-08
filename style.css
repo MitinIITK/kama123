@@ -81,7 +81,8 @@ img {
     letter-spacing: -7px;
     font-weight: 700;
     text-transform: uppercase;
-    animation: spin 2s ease-out infinite;
+    animation: spin 2s ease-in-out infinite;
+    /* transform-origin: top center;  */
     text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
 }
 
@@ -899,7 +900,7 @@ canvas {
   min-width: 100%;
   object-fit: cover;
   cursor: pointer;
-  filter: grayscale(80%);
+  filter: grayscale(10%);
   transition: .35s linear;
 }
 .gal1 video{
@@ -995,3 +996,410 @@ canvas {
   100% { transform: rotate(-10deg); }
 }
 
+
+
+@media (min-width:600px) {
+  .fixed-img {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 250px;
+    height: 370px;
+    border-radius: 10%;
+    background-size: cover;
+    background-position: center;
+    transform: translateY(-50px); /* Start above */
+    transition: opacity 0.8s ease-in-out, transform 2s ease-in-out;
+  }
+  .left-img {
+    left: 5%;
+    background-image: url('https://www.pngmart.com/files/4/Kakashi-PNG-Free-Download.png');
+  }
+  .right-img {
+      width: 300;
+      height: 350px;
+    right: 5%;
+    
+    background-image: url('/faltu/img1_1.jpg');
+  }
+}
+.car1{
+  position: relative;
+}
+
+
+
+
+@media (max-width:599px) {
+  .fixed-img {
+    display: none;
+    position: absolute;
+    bottom: 0%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    background-size: cover;
+    background-position: center;
+    transform: translateY(-50px); /* Start above */
+    transition: opacity 0.8s ease-in-out, transform 2s ease-in-out;
+  }
+  .left-img {
+    left: 5%;
+    background-image: url('https://www.pngmart.com/files/4/Kakashi-PNG-Free-Download.png');
+  }
+  .right-img {
+      width: 150;
+      height: 200px;
+    right: 5%;
+    
+    background-image: url('/faltu/img1_1.jpg');
+  }
+}
+.mainhjwishdiq {
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ background-color: #FFA1A1;
+  color: #fffefe;
+  overflow-x: hidden;
+}
+
+.debate-container {
+  width: 60%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+.debate-text {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  margin: 100px 0;
+  font-size: 20px;
+  max-width: 600px;
+  transform: translateY(20px);
+}
+.left-text {
+  text-align: left;
+  margin-right: auto;
+  margin-left: 0;
+}
+.right-text {
+  text-align: right;
+  margin-left: auto;
+  margin-right: 0;
+}
+.kakashicame{
+  /* max-width: 80vw; */
+  text-align: center;
+    margin-top: 30px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem; /* Adjust for size */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgb(59, 0, 0);
+  
+  
+}
+.pookie {
+  width: 200px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  --_m: radial-gradient(#000 69%,#0000 70%) 84.5%/50%;
+  -webkit-mask-box-image: var(--_m);
+             mask-border: var(--_m);
+  clip-path: polygon(-41% 0,50% 91%, 141% 0);
+  transition: transform 0.3s ease-in-out;
+  /* overflow: hidden; */
+}
+.pookie:hover{
+  transform: scale(1.5);
+}
+
+/* fallback until better support for mask-border */
+@supports not (-webkit-mask-box-image: var(--_m)) { 
+  img {
+   --_m:
+     radial-gradient(at 70% 31%,#000 29%,#0000 30%),
+     radial-gradient(at 30% 31%,#000 29%,#0000 30%),
+     linear-gradient(#000 0 0) bottom/100% 50% no-repeat;
+   -webkit-mask: var(--_m);
+           mask: var(--_m);
+  }
+}
+
+.pookieincont {
+  margin: 0;
+margin: 50px;
+  display: grid;
+  grid-auto-flow: column;
+  place-content: center;
+  gap: 30px;
+  /* background: pink; */
+  filter: drop-shadow(0 0 10px #ff3e60)
+  
+}
+
+.leftImg, .rightImg {
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap'); 
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap');
+
+/* Defining the theme for the card: colors, fonts, spacing. 
+This uses CSS variables - so you only have to change the colors in one place */ 
+:root {
+  /* The color for your card background and background pattern */ 
+  --background: #F3F0D7;
+  --background-decor: #DBD0C0;
+  
+
+  /* Colors for the elements on your card */ 
+  --banner-bg: #1C0C5B;
+  --banner-txt: white;
+
+  /* Message area colors */ 
+  --message-bg: #F1EDE9;
+  --message-line: #94ACD4;
+  --message-txt: #333333;
+
+  /* Fonts */ 
+  --font-banner: 'Abril Fatface', cursive;
+  --font-text: 'Shadows Into Light', cursive;
+
+  /* Space and other details */
+  --space: 16px;
+  --space-xsm: 4px;
+  --space-sm: 8px;
+  --space-lg: 24px;
+  --space-xlg: 48px;
+}
+
+/* Base template configurations */ 
+/* body {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+
+  /* background color - here we are using the variable we created earlier! */ 
+  /* background-color: var(--background);
+
+  /* background pattern - remove the lines below and paste the new code if you want to use a different style */ 
+  /* background-image: radial-gradient(var(--background-decor) 20%, transparent 0), radial-gradient(var(--background-decor) 20%, transparent 0);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px; */
+
+/* } */ 
+
+.bday-card {
+  max-width: 420px;
+  height: 100%;
+  padding-top: var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.bday-pic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 240px;
+  padding: var(--space-sm) var(--space-sm) var(--space-xlg);
+  background: white;
+  border-radius: 4px;
+  box-shadow: var(--space-xsm) var(--space-xsm) 15px rgba(0,0,0, .15);
+
+  /* Edit the Translate property below to adjust the position of your picture */ 
+  transform: rotate(5deg) translate(20px, 45px);
+}
+
+.bday-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bday-decor--container {
+  position: relative;
+}
+
+.bday-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  font-size: 42px;
+  z-index: 1;
+
+  /* Play around with those properties to change your banner styling */ 
+  color: var(--banner-txt);
+  font-family: var(--font-banner);
+  text-transform: uppercase;
+  transform: rotate(-5deg);
+  gap: var(--space-sm) 0;
+}
+
+.bday-banner span {
+  background: var(--banner-bg);
+  padding: var(--space) var(--space-lg);
+  flex-grow: 0;
+}
+
+.bday-banner span:nth-child(2) {
+  margin-left: var(--space-lg);
+}
+
+
+.bday-message {
+  max-width: 80%;
+  padding: 35px var(--space);
+  font-family: var(--font-text);
+  font-size: 18px;
+  line-height: 32px;
+  color: var(--message-txt);
+  background-color: var(--message-bg);
+}
+
+/* Paper */
+.bday-message--paper {
+  background: repeating-linear-gradient(var(--message-bg), var(--message-bg) 31px, var(--message-line) 31px, var(--message-line) 32px);
+  box-shadow: var(--space-xsm) var(--space-xsm) 15px rgba(0,0,0, .15);
+}
+/* End - Paper */
+
+/* Block right */
+.bday-message--block-right {
+  position: relative;
+}
+
+.bday-message--block-right::before {
+  content: "";
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: var(--paper);
+  z-index: -1;
+}
+/* End - Block right */
+
+/* Block left */
+.bday-message--block-left {
+  position: relative;
+}
+
+.bday-message--block-left::before {
+  content: "";
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: var(--paper);
+  z-index: -1;
+}
+/* End - Block left */
+
+
+.bday-decor {
+  /* Emojis are text - so here we are setting a font-size to make them bigger */ 
+  font-size: 96px;
+}
+
+/* Positioning for the emojis - play around with the values to change the placement of your decorations */ 
+.bday-decor--top-right { 
+  position: absolute;
+  bottom: -70px;
+  right: -20px;
+}
+
+.bday-decor--top-left {
+  position: absolute;
+  bottom: 0px;
+  left: -25px;
+}
+
+.bday-decor--bottom-right {
+  position: absolute; 
+  right: 20px;
+}
+
+/* Animations */ 
+
+/* Here we designate an specific animation to an specific element using a class. We have a defined name, time and iteration-count for each animation. We can also define the origin point from which the animation will happen - the default is the center. */  
+.zoom-left-in-out {
+  animation-name: zoom-left-in-out;
+  animation-duration: 1.75s;
+  animation-iteration-count: infinite;
+  transform-origin: left bottom;
+}
+
+/* Here we specify what will change on the element when they animate */ 
+@keyframes zoom-left-in-out {
+  /* Animation will start and end with the same settings */ 
+  0%, 100% {
+    transform: scale(0.95) rotate(2deg);
+  }
+
+  /* Animation will reach those settings 50% into the duration time we set on the declaration */
+  50% {
+    transform: scale(1) rotate(-2deg);
+  }
+}
+
+/* pulse */ 
+.pulse {
+  animation-name: pulse;
+  animation-duration: 1.3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(0.9);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+/* pulse - End */
+
+/* float */ 
+.float {
+  animation-name: float;
+  animation-duration: 1.9s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+/* float - End */
+
+/* spin */ 
+.spin {
+  animation-name: spin;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+
+/* spin - End */
